@@ -37,7 +37,8 @@ namespace ChatbotApi.Services
                     new { role = "system", content = systemMessage }, // ✅ Dateiinhalt als System-Message
                     new { role = "user", content = userInput }
                 },
-                max_tokens = 200
+                max_tokens = 1000,
+                stream = false
             };
 
             string jsonContent = JsonSerializer.Serialize(requestBody);
